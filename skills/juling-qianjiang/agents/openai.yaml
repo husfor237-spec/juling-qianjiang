@@ -1,0 +1,6 @@
+interface:
+  display_name: "拘灵遣将"
+  short_description: "把活派给子代理、把主将上下文压到最小的作业流程：探路 → 冻结规格 → 派发 → 监军审查 → 轮换"
+  default_prompt: "用 $juling-qianjiang 走一遍：先派 scout 探路，再立规格动手，交付前派 inspector 审一遍。"
+policy:
+  allow_implicit_invocation: true

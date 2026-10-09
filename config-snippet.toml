@@ -1,0 +1,20 @@
+# 拘灵遣将 · [agents] 全局设置
+#
+# 把这段加进 ~/.codex/config.toml（或项目级 .codex/config.toml）。
+#
+# 注意：agents.enabled 默认为 true，所以派发本来就可用 ——
+# 缺的不是开关，是指令，而那正是这个 skill 要补的东西。
+
+[agents]
+# 不设就等于不设上限，并发容易失控。按机器和额度调。
+max_concurrent_threads_per_session = 4
+default_subagent_reasoning_effort = "high"
+
+# 想给「没显式指定模型」的派发省钱，可解开下面这行。
+# scout.toml 已经自己指定了 gpt-6-luna，这一行管的是临时派发的其他子代理。
+# default_subagent_model = "gpt-6-luna"
+
+# 其他可用键（本仓库未使用）：
+#   agents.enabled                          —— 布尔，默认 true
+#   agents.interrupt_message                —— 布尔，默认 true，子代理被打断时是否留下模型可见的消息
+#   agents.max_threads                      —— 旧别名，等同于 max_concurrent_threads_per_session
